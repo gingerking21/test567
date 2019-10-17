@@ -1,0 +1,135 @@
+<html>
+<head><title>About gingerjackzhang</title>
+  <link rel="stylesheet" type = "text/css" href ="css/oct15.css">
+  <link rel = "stylesheet" type = "text/css" href= "css/lightbox.min.css">
+  <script src= "js/lightbox-plus-jquery.min.js"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+.color-me{
+    color:white;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+
+ .mynavbar {
+	color: white;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+</style>
+
+<nav class="navbar navbar-dark" style="background-color: 5878F5;">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand mynavbar" href="#" >Navbar</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" class = "color-me" >Home</a></li>
+      <li><a href="about.html" class = "color-me">About</a></li>
+      <li><a href="https://www.linkedin.com/in/jack-zhang-491614186/" target="_blank" class = "color-me" >My Linkedin Page</a></li>
+      <li><a href="https://www.acorn.utoronto.ca/" class = "color-me" >Acorn</a></li>
+    </ul>
+
+<form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+  </div>
+</nav>
+
+ </head>
+<body>
+
+<h1 style="text-align:center;">About Jack</h1>
+
+
+
+<p style="text-align:center;">This is about me <br> Only me <br> =D </p>
+
+
+
+
+<h3 style="text-align:center;">And MHI1001</h3>
+<h4 style="text-align:center;"><i>And MHI1001</i></h4>
+
+ <body style="background-color:#F33941  ;">
+</body>
+
+
+<h2 style="text-align:center;">HTML Image</h2>
+
+<center>
+<div class ="gallery">
+<a href="images/traveler1.jpg" data-lightbox="mygallery" data-title="Travelers group picture"><img src ="images/traveler1small.jpg"></a>
+<a href="images/traveler2.jpg" data-lightbox="mygallery" data-title="Travelers group picture"><img src ="images/traveler2small.jpg"></a>
+<a href="images/traveler3.jpg" data-lightbox="mygallery" data-title="Behind the Scene"><img src ="images/traveler3small.jpg"></a>
+<a href="images/traveler4.jpg" data-lightbox="mygallery" data-title="Marcy and David"><img src ="images/traveler4small.jpg"></a>
+<a href="images/traveler5.jpg" data-lightbox="mygallery" data-title="Travelers Title"><img src ="images/traveler5small.jpg"></a>
+<a href="images/traveler6.jpg" data-lightbox="mygallery" data-title="On a mission"><img src ="images/traveler6small.jpg"></a>
+
+<br>
+<button class="accordion">My Linkedin</button>
+<div class="panel">
+  <p style="text-align:center;"><a href="https://www.linkedin.com/in/jack-zhang-491614186/" >Link</a></p>
+</div>
+
+<button class="accordion">Search Engine</button>
+<div class="panel">
+  <p style="text-align:center;"><a href="https://www.google.ca/">Link</a> </p>
+</div>
+
+<button class="accordion">Streaming Website</button>
+<div class="panel">
+<p  style="text-align:center;"><a href="https://www.youtube.com/" >Link</a></p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
