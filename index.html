@@ -1,5 +1,15 @@
 <html>
 <head><title>Homepage for gingerjackzhang</title>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150267187-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150267187-1');
+</script>
 
 
 
@@ -34,7 +44,7 @@
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #ccc; 
 }
 
 .panel {
@@ -75,34 +85,39 @@
 
 <body>
   <script type = "text/javascript">
-
-
-  var days = 730; 
+  
+  /***********************************************
+  * Display time of last visit script- by JavaScriptKit.com
+  * This notice MUST stay intact for use
+  * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
+  ***********************************************/
+  
+  var days = 730; // days until cookie expires = 2 years.
   var lastvisit=new Object();
-  var firstvisitmsg="This is your first visit to this page. Welcome!";
+  var firstvisitmsg="This is your first visit to this page. Welcome!"; 
   lastvisit.subsequentvisitmsg="Welcome back visitor! Your last visit was on <b>[displaydate]</b>";
-
-  lastvisit.getCookie=function(Name){
-  var re=new RegExp(Name+"=[^;]+", "i");
-  if (document.cookie.match(re))
+  
+  lastvisit.getCookie=function(Name){ 
+  var re=new RegExp(Name+"=[^;]+", "i"); 
+  if (document.cookie.match(re)) 
   return document.cookie.match(re)[0].split("=")[1];
-  return'';
+  return''; 
   }
-
-  lastvisit.setCookie=function(name, value, days){
+  
+  lastvisit.setCookie=function(name, value, days){ 
   var expireDate = new Date();
-
+  
   var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days));
   document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
   }
-
+  
   lastvisit.showmessage = function() {
   var wh = new Date();
-  if (lastvisit.getCookie("visitc") == "") {
-  lastvisit.setCookie("visitc", wh, days);
+  if (lastvisit.getCookie("visitc") == "") { 
+  lastvisit.setCookie("visitc", wh, days); 
   document.write(firstvisitmsg);
   }
-
+  
   else {
   var lv = lastvisit.getCookie("visitc");
   var lvp = Date.parse(lv);
@@ -129,75 +144,20 @@
   var dispDate = dy + ", " + mn + " " + dd + ", " + yy + " " + hh + ":" + mins + ":" + secs + " " + ampm
   document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", dispDate))
   }
-
-  lastvisit.setCookie("visitc", wh, days);
-
-  }
-
-  lastvisit.showmessage();
-
-  </script>
-
-  <script>
-  (function(w,d,s,g,js,fs){
-    g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
-    js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
-    js.src='https://apis.google.com/js/platform.js';
-    fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
-  }(window,document,'script'));
-  </script>
   
+  lastvisit.setCookie("visitc", wh, days);
+  
+  }
+  
+  lastvisit.showmessage();
+  </script>
+
 	
-  <div id="embed-api-auth-container"></div>
-  <div id="chart-container"></div>
-  <div id="view-selector-container"></div>
-  <script>
-
-gapi.analytics.ready(function() {
-
- 
-  gapi.analytics.auth.authorize({
-    container: 'embed-api-auth-container',
-    clientid: 'UA-150267187-1'
-  });
-
-
-  var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector-container'
-  });
-
-
-  viewSelector.execute();
-
-
- 
-  var dataChart = new gapi.analytics.googleCharts.DataChart({
-    query: {
-      metrics: 'ga:sessions',
-      dimensions: 'ga:date',
-      'start-date': '30daysAgo',
-      'end-date': 'yesterday'
-    },
-    chart: {
-      container: 'chart-container',
-      type: 'LINE',
-      options: {
-        width: '100%'
-      }
-    }
-  });
-
-  viewSelector.on('change', function(ids) {
-    dataChart.set({query: {ids: ids}}).execute();
-  });
-
-});
-</script>
-
-
+	
+	
 <center>
 <h2> Website for Jack </h2>
-
+ 
 <button type="button" class="btn btn-outline-success">Interests</button>
 
 <p style="text-align:center;">This is a paragraph. <br> And I dont know <br> what to write body</p>
